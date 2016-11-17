@@ -18,3 +18,12 @@ MOC_DIR = _build
 
 DEFINES += QT_NO_CAST_TO_ASCII
 DEFINES += QT_NO_CAST_FROM_ASCII
+
+#macx:{
+    QMAKE_LFLAGS += -framework Foundation
+    QMAKE_LFLAGS += -framework Carbon
+    QMAKE_LFLAGS += -framework AVFoundation
+    QMAKE_LFLAGS += -framework CoreFoundation
+    QMAKE_LFLAGS += -framework ApplicationServices
+    QMAKE_LFLAGS += -framework CoreServices
+#}

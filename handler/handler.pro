@@ -19,3 +19,16 @@ SOURCES += $$PWD/BreakpadHandler.cpp
 
 ## google-breakpad
 include($$PWD/../third-party/google-breakpad.pri)
+macx:{
+    LIBS += -framework Foundation
+    LIBS += -framework Cocoa
+    LIBS += -framework AVFoundation
+    LIBS += -framework CoreFoundation
+    QMAKE_LFLAGS += -framework Foundation
+    QMAKE_LFLAGS += -framework Carbon
+    QMAKE_LFLAGS += -framework AVFoundation
+    QMAKE_LFLAGS += -framework CoreFoundation
+    QMAKE_LFLAGS += -framework ApplicationServices
+    QMAKE_LFLAGS += -framework CoreServices
+}
+

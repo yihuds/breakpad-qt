@@ -42,6 +42,7 @@
 #include <mach-o/loader.h>
 #include <sys/types.h>
 #include <vector>
+#include <stdlib.h>
 
 namespace google_breakpad {
 

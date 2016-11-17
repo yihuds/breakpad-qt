@@ -73,7 +73,8 @@ int MachoWalker::ValidateCPUType(int cpu_type) {
 #elif __i386__
     cpu_type = CPU_TYPE_X86;
 #else
-#error Unknown architecture -- are you on a PDP-11?
+//#error Unknown architecture -- are you on a PDP-11?
+        cpu_type = 0;
 #endif
   }
 
